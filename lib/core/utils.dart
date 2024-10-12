@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:intl_utils/intl_utils.dart';
+import 'package:intl/intl.dart';
+
 
 String formatDate(String date) {
   DateTime dt = DateTime.parse(date);

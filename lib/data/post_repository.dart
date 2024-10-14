@@ -54,7 +54,7 @@ class PostRepository {
     return responseBody;
   }
 
-  //id로 단건 조회
+  //id로 단건 삭제
   Future<void> deleteById(int id) async {
     //삭제의 경우 try catch 혹은 if로 200코드냐 아니냐에 따라 로직이 달라져야 한다. 삭제 됐을 때와 안 됐을 때.
     //받을 데이터가 없기에 Future<void>

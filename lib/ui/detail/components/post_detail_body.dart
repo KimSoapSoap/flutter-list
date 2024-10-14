@@ -1,4 +1,5 @@
 import 'package:blog/ui/detail/post_detail_vm.dart';
+import 'package:blog/ui/list/post_list_vm.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -28,7 +29,10 @@ class PostDetailBody extends ConsumerWidget {
               alignment: Alignment.centerRight,
               child: ElevatedButton(
                 child: Icon(CupertinoIcons.trash_fill),
-                onPressed: () {},
+                //상세 페이지에서 휴지통 눌렀을 때
+                onPressed: () {
+                  ref.read(postListProvider.notifier).notifyDelete(model.id);
+                },
               ),
             ),
             SizedBox(height: 10),
